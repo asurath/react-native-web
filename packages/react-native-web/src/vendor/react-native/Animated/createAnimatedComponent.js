@@ -36,6 +36,7 @@ function createAnimatedComponent(Component: any): any {
     constructor(props: Object) {
       super(props);
       this._setComponentRef = this._setComponentRef.bind(this);
+	  this._propsAnimated = new AniamtedProps(props, this._animatedPropsCallback.bind(this)); 
     }
 
     componentWillUnmount() {
